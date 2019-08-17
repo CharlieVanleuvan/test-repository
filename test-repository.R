@@ -7,7 +7,7 @@ library("mapproj")
 #build a dataframe of US states
 dummyMapdf <- data.frame(state.name, stringsAsFactors = F) #state.name is built in state dataset
 dummyMapdf$state <- tolower(dummyMapdf$state.name) #for maps in ggplot, need to use lower case
-
+us <- map_data("state")
 
 #this is a basic map of the US, can add geoms to this to show data (such as population density).
 #the ggplot() call will need to include a state column 
